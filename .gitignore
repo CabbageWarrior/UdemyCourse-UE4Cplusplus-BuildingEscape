@@ -11,5 +11,8 @@
 *.VC.db-shm
 *.VC.db-wal
 
+# VS cache dir.
+BuildingEscape/.vs/
+
 # Specific for project
 BuildingEscape/Content/StarterContent/
