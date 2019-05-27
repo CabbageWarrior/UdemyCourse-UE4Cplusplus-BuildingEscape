@@ -22,7 +22,8 @@ void UPositionReport::BeginPlay()
 
 
 	FString ObjectName = GetOwner()->GetName();
-	UE_LOG(LogTemp, Warning, TEXT("PositionRepo Begin on \"%s\"."), *ObjectName);
+	FString ObjectPos = GetOwner()->GetActorLocation().ToString();
+	UE_LOG(LogTemp, Warning, TEXT("[PositionRepo] \"%s\" is at %s."), *ObjectName, *ObjectPos);
 	
 }
 
