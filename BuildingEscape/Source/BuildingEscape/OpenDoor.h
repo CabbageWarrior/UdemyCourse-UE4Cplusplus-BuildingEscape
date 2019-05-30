@@ -29,12 +29,11 @@ private:
 	UPROPERTY(VisibleAnywhere)
 		float OpenAngle = 90.f;
 
+	UPROPERTY(VisibleAnywhere)
+		AActor* ActorThatOpens = nullptr;
+	
 	UPROPERTY(EditAnywhere)
 		ATriggerVolume* PressurePlate = nullptr;
-
-	UPROPERTY(EditAnywhere)
-		AActor* ActorThatOpens = nullptr;
-
 
 	void OpenDoor();
 };
