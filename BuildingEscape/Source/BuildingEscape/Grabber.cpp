@@ -59,5 +59,20 @@ void UGrabber::TickComponent(float DeltaTime, ELevelTick TickType, FActorCompone
 		0,
 		10.f
 	);
-}
 
+	FHitResult Hit;
+	FCollisionQueryParams TraceParameters = FCollisionQueryParams(FName(TEXT("")), false, GetOwner());
+	GetWorld()->LineTraceSingleByObjectType(
+		OUT Hit,
+		PlayerViewPointLocation,
+		LineTraceEnd,
+		FCollisionObjectQueryParams(ECollisionChannel::ECC_PhysicsBody),
+		TraceParameters
+	);
+
+	AActor* ElementActor = Hit.GetActor();
+	if (ElementActor)
+	{
+		UE_LOG(LogTemp, Warning, TEXT("Element touched: %s"), *ElementActor->GetName());
+	}
+}
