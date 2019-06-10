@@ -10,9 +10,11 @@
 *.VC.db
 *.VC.db-shm
 *.VC.db-wal
+*.suo
 
 # VS cache dir.
 BuildingEscape/.vs/
 
 # Specific for project
-BuildingEscape/Content/StarterContent/
+BuildingEscape/Content/StarterContent/Textures/
+BuildingEscape/Content/StarterContent/HDRI/
